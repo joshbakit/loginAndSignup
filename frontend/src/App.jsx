@@ -5,7 +5,7 @@ import SignupPage from "./pages/SignupPage";
 import DashboardPages from "./pages/DashboardPages";
 import EmailVerificationPage from "./pages/EmailVerificationPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
-import ResetPasswordPage  from "./pages/ResetPasswordPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { useAuthStore } from "./store/authStore";
@@ -107,6 +107,7 @@ const App = () => {
             </RedirecAuthenticatedUser>
           }
         />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );
